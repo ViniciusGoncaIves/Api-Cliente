@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApiClientes.Database.Models;
+using System;
 using System.Collections.Generic;
 
 namespace ApiClientes.Database.Models;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ApiClientes.Database.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiClientes.Database.Models;
@@ -34,17 +35,17 @@ public partial class ClientesContext : DbContext
                 .UseIdentityAlwaysColumn()
                 .HasColumnName("id");
             entity.Property(e => e.Alteradoem)
-                .HasColumnType("timestamp with time zone")
+                .HasColumnType("timestamp wit time zone")
                 .HasColumnName("alteradoem");
             entity.Property(e => e.Criadoem)
-                .HasColumnType("timestamp with time zone")
+                .HasColumnType("timestamp wit time zone")
                 .HasColumnName("criadoem");
             entity.Property(e => e.Documento)
                 .IsRequired()
                 .HasMaxLength(20)
                 .HasColumnName("documento");
             entity.Property(e => e.Nascimento)
-                .HasColumnType("timestamp with time zone")
+                .HasColumnType("date")
                 .HasColumnName("nascimento");
             entity.Property(e => e.Nome)
                 .IsRequired()

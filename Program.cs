@@ -1,11 +1,13 @@
 
 using ApiClientes.Database.Models;
 using ApiClientes.Service;
+using ApiClientes.Database.Models;
+using ApiClientes.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace ApiClientes
+namespace clientes
 {
     public class Program
     {
@@ -21,6 +23,7 @@ namespace ApiClientes
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<ClientesContext>();
             builder.Services.AddScoped<ClientesService>();
+            builder.Services.AddScoped<EnderecoService>();
 
             var app = builder.Build();
 

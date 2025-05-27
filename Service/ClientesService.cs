@@ -48,7 +48,7 @@ namespace ApiClientes.Service
         {
             var cliente = _dbcontext.TbClientes.Find(id);
             if (cliente == null)
-                throw new BadRequestException("Cliente não encontrado.");
+                throw new BadRequestException("Cliente não encontrado!");
 
             ClienteValidation.ValidarCriarCliente(dto);
 
